@@ -142,3 +142,60 @@ or slice off the extra, which is like css background-size cover.
 
 * meet - shrink image such that all edges are contained within viewport
 * slice - trims off excess
+
+## SVG Elements
+
+Types of elements include graphical, container, gradient, and animation.
+
+Common graphical elements include:
+Circle, ellipse, line, path, polygon, polyline, rect, text, use
+
+Common container elements include:
+defs, g, symbol, svg
+
+Two types of gradient elements:
+linearGradient, radialGradient
+
+Animation techniques include SVG animation elements:
+animate, animateMotion, animateTransform, set
+
+### Graphical Elements
+
+[Example](examples/elements.html)
+
+Most graphical elements can have the following attributes:
+
+* fill: fill the element with color
+* stroke: sets the outline color
+* stroke-width: sets the size of the stroke
+
+`ellipse` takes a centerpoint defined by cx and cy, and also two radii rx and ry
+
+`rect` needs x and y to determine where its top-left corner will be positioned.
+Can also add rounded corners by setting rx and ry.
+
+`line` creates straight line between two points defined by x1, y1 and x2, y2
+
+`polyline` is a collection of connected line elements. Points are defined as a list
+in the form x1, y1, x2, y2, etc...
+
+`polygon` similar to polyline, but first and last points connect.
+
+`path` contains a set of points, lines and arcs. All other shapes can be defined in terms of path.
+
+Path data attribute defined with `d`. It can contain:
+
+* M: moveTo
+* L: lineTo
+* Arcs, cubic, and quadratic bezier curves
+* Z: closepath
+
+moveTo is starting point of the path
+
+lineTo draws straight lines from one point to another
+
+closepath connects current point to initial point with straight line
+
+`text` is used to add fully accessible text within an SVG graphic. x and y specify its position.
+
+`use` reference other svg elements for reuse and render them in a given location.

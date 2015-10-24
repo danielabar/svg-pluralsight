@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SVG elements</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/elements.css">
+</head>
+
+<body>
+
+  <h2>Ellipse</h2>
+  <svg>
+    <ellipse cx="150" cy="150" rx="140" ry="100" fill="#9129ab" stroke="#423e45" stroke-width="2"></ellipse>
+  </svg>
+
+  <h2>Rect</h2>
+  <svg>
+    <rect x="0" y="0" width="250" height="200" fill="#9129ab" stroke="#423e45" stroke-width="2"></ellipse>
+  </svg>
+
+  <h2>Rect with rounded corners</h2>
+  <svg>
+    <rect x="0" y="0" width="250" height="200" rx="20" ry="20" fill="#9129ab" stroke="#423e45" stroke-width="2"></ellipse>
+  </svg>
+
+  <h2>Line</h2>
+  <svg>
+    <line x1="20" y1="200" x2="280" y2="100" stroke="#4718e6" stroke-width="3"></line>
+  </svg>
+
+  <h2>Polyline</h2>
+  <svg>
+    <polyline points="20,200 80,50 160,150 200,90 280,160" fill="none" stroke="#4718e6" stroke-width="3"></polyline>
+  </svg>
+
+  <h2>Polygon</h2>
+  <svg>
+    <polygon points="240,20 290,150 240,280 60,280 10,150 60,20" fill="none" stroke="#4718e6" stroke-width="3"></polyline>
+  </svg>
+
+  <h2>Path</h2>
+  <svg viewBox="0, 0, 300, 300" preserveAspectRatio="xMidYMid meet">
+    <path d="M150,162 c6.73287,-4.87058 9.88721,6.67281 8.09523,11.19048 -4.85616,12.24262 -21.44441,11.67367 -30.47619,4.99998 -16.15574,-11.93765 -14.42286,-35.92583 -1.90473,-49.7619 18.37085,-20.30499 50.61646,-17.28885 69.04761,1.19052 24.56583,24.63009 20.20672,65.38303 -4.28577,88.33333 -30.82129,28.8806 -80.1862,23.15185 -107.61904,-7.38102 -33.22484,-36.9794 -26.11285,-95.01007 10.47627,-126.90475 43.11902,-37.58678 109.84686,-29.08384 146.19047,13.57152 41.96013,49.2473 32.06147,124.69226 -16.66677,165.47617 -55.36813,46.34128 -139.54372,35.04376 -184.76189,-19.76202 -50.727951,-61.4838 -38.029416,-154.39958 22.85727,-204.0476 67.59577,-55.1187 169.25877,-41.0176 223.33331,25.95252"
+      fill="none" stroke="#4718e6" stroke-width="3" />
+  </svg>
+
+  <h2>Text</h2>
+  <svg>
+    <rect x="0" y="85" width="300" height="130" fill="#FFA500"></rect>
+    <text x="20" y="175" fill="#FFF">HELLO SVG!</text>
+  </svg>
+
+  <h2>Use</h2>
+  <svg>
+
+    <!-- Items for reuse -->
+    <defs>
+      <g id="itemForReuse">
+        <circle cx="50" cy="50" r="50"></circle>
+      </g>
+    </defs>
+
+    <!-- Item Use #1 -->
+    <use xlink:href="#itemForReuse" x="0" y="0" fill="#0fe658"></use>
+
+    <!-- Item Use #2 -->
+    <use xlink:href="#itemForReuse" x="120" y="120" fill="#e60f76"></use>
+  </svg>
+
+</body>
+</html>
