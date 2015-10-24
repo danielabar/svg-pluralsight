@@ -16,6 +16,7 @@
     - [Graphical Elements](#graphical-elements)
     - [Container Elements](#container-elements)
     - [Gradient Elements](#gradient-elements)
+    - [Styling SVGs with CSS](#styling-svgs-with-css)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -160,9 +161,6 @@ defs, g, symbol, svg
 Two types of gradient elements:
 linearGradient, radialGradient
 
-Animation techniques include SVG animation elements:
-animate, animateMotion, animateTransform, set
-
 ### Graphical Elements
 
 [Example](examples/graphical-elements.html)
@@ -232,3 +230,9 @@ stop offsets range in value from 0 - 100%.
 `radialGradient` require a circle to be defined to set their outermost stop position at 100%,
 defined with cx, cy and r. Also requires a focual point for the innermost stop position at 0%,
 specified with fx and fy. If focal point is not defined, cx and cy values will be used.
+
+### Styling SVGs with CSS
+
+Attributes such as `fill` and `stroke` should be replaced with `class` and styled with css.
+
+Many SVG prsentation attributes are available to be styled using css.
