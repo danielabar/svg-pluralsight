@@ -24,3 +24,7 @@ text {
 .my-group circle {
   fill: #c60170;
 }
+
+rect#myRect {
+  fill: url(#myLinearGradient);
+}

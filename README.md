@@ -15,6 +15,7 @@
   - [SVG Elements](#svg-elements)
     - [Graphical Elements](#graphical-elements)
     - [Container Elements](#container-elements)
+    - [Gradient Elements](#gradient-elements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -215,3 +216,19 @@ or style all their fill colors the same.
 `symbol` defines graphical template objects to be instantiated by `<use>` elements.
 Similar to `use`, it's not rendered until referenced by an object.
 An advatage over use is `symbol` can define its own `viewBox` and `preserveAspectRatio` attributes.
+
+### Gradient Elements
+
+[Example](examples/gradient-elements.html)
+
+Gradients are not rendered on their own, rather they are defined in a `defs` section,
+then used as a fill in a graphical element via `url(#gradientId)`. Can also be used in css.
+
+They contain stops which define what color the gradient should be at certain points.
+stop offsets range in value from 0 - 100%.
+
+`linearGradient` by default is horizontal. Use x1, x2, y1 and y2 values to flip it to vertical
+
+`radialGradient` require a circle to be defined to set their outermost stop position at 100%,
+defined with cx, cy and r. Also requires a focual point for the innermost stop position at 0%,
+specified with fx and fy. If focal point is not defined, cx and cy values will be used.
