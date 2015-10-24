@@ -12,6 +12,9 @@
     - [Preserve Aspect Ratio](#preserve-aspect-ratio)
       - [Align values](#align-values)
       - [Meet or slice values](#meet-or-slice-values)
+  - [SVG Elements](#svg-elements)
+    - [Graphical Elements](#graphical-elements)
+    - [Container Elements](#container-elements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -161,7 +164,7 @@ animate, animateMotion, animateTransform, set
 
 ### Graphical Elements
 
-[Example](examples/elements.html)
+[Example](examples/graphical-elements.html)
 
 Most graphical elements can have the following attributes:
 
@@ -199,3 +202,16 @@ closepath connects current point to initial point with straight line
 `text` is used to add fully accessible text within an SVG graphic. x and y specify its position.
 
 `use` reference other svg elements for reuse and render them in a given location.
+
+### Container Elements
+
+[Example](examples/container-elements.html)
+
+`defs` contains items intended for later reuse. Everything in defs element is not rendered until referenced.
+
+`g` is used to group a collection of items. For example, if want to animate multiple elements at once,
+or style all their fill colors the same.
+
+`symbol` defines graphical template objects to be instantiated by `<use>` elements.
+Similar to `use`, it's not rendered until referenced by an object.
+An advatage over use is `symbol` can define its own `viewBox` and `preserveAspectRatio` attributes.

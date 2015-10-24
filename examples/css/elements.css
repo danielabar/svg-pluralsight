@@ -20,3 +20,7 @@ text {
   font-size: 45px;
   font-family: Arial, sans-serif;
 }
+
+.my-group circle {
+  fill: #c60170;
+}

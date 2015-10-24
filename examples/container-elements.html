@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SVG Container Elements</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/elements.css">
+</head>
+
+<body>
+
+  <h2>Group</h2>
+  <svg>
+    <g class="my-group">
+      <circle cx="50" cy="50" r="50"></circle>
+      <circle cx="170" cy="170" r="50"></circle>
+    </g>
+  </svg>
+
+  <h2>Symbol</h2>
+  <svg>
+
+    <!-- Symbol for reuse -->
+    <symbol id="symbolForReuse" viewBox="0 0 500 500">
+      <circle cx="50" cy="50" r="50"></circle>
+    </symbol>
+
+    <!-- Item Use #1 -->
+    <use xlink:href="#symbolForReuse" x="0" y="0" fill="#0fe658"></use>
+
+    <!-- Item Use #2 -->
+    <use xlink:href="#symbolForReuse" x="120" y="120" fill="#e60f76"></use>
+  </svg>
+
+</body>
+</html>
