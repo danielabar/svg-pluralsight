@@ -9,6 +9,9 @@
     - [Canvas](#canvas)
     - [Viewport](#viewport)
     - [Viewbox](#viewbox)
+    - [Preserve Aspect Ratio](#preserve-aspect-ratio)
+      - [Align values](#align-values)
+      - [Meet or slice values](#meet-or-slice-values)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -98,4 +101,44 @@ To center a circle in these new co-ordinates, must change the cx and cy to 300 a
 
 ### Preserve Aspect Ratio
 
+[Example](examples/preserve-aspect-ratio.html)
+
 This is used to crop and position graphics that don't exactly fit within the viewport.
+
+The dimensions of the viewBox don't have to be in proportion to the viewport.
+`preserveAspectRatio` allows us to control what happens when the width and height
+between viewport and viewBox are not proportional.
+
+If don't want to maintain aspect ratio, set to `none`. This will allow graphic to be squeezed and stretched.
+
+```html
+<svg width="100" height="300" viewBox="0 0 400 400" preserveAspectRatio="none">
+  <!-- content... -->
+</svg>
+```
+
+Any other value than `none`, will force the graphic to have uniform scaling and will preserve aspect ratio of viewBox.
+
+Two parameters are passed to `preserveAspectRatio`:
+
+* align: in the form of x and y
+* meet or slice: viewBox should meet edges of viewport (similar to css background-size contain)
+or slice off the extra, which is like css background-size cover.
+
+#### Align values
+
+* none
+* xMinYMin - left top
+* xMidYMin - middle top
+* xMaxYMin - right top
+* xMinYMid - left middle
+* xMidYMid - middle middle
+* xMaxYMid - right middle
+* xMinYMax - left bottom
+* xMidYMax - middle bottom
+* xMaxYMax - right bottom
+
+#### Meet or slice values
+
+* meet - shrink image such that all edges are contained within viewport
+* slice - trims off excess
