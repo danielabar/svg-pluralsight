@@ -17,6 +17,8 @@
     - [Container Elements](#container-elements)
     - [Gradient Elements](#gradient-elements)
     - [Styling SVGs with CSS](#styling-svgs-with-css)
+  - [SVG Sprites](#svg-sprites)
+    - [Inline SVG Sprites](#inline-svg-sprites)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -236,3 +238,25 @@ specified with fx and fy. If focal point is not defined, cx and cy values will b
 Attributes such as `fill` and `stroke` should be replaced with `class` and styled with css.
 
 Many SVG prsentation attributes are available to be styled using css.
+
+## SVG Sprites
+
+Technique to maintain DRY principle.
+
+### Inline SVG Sprites
+
+Hidden collection of code snippets for multiple images. Contained within a single SVG tag.
+Code for each individual image within the sprite is wrapped in a `<symbol>` element.
+
+Sprite requires a `display:none` style, even though `symbol` prevents it from rendering.
+Because inline svgs still take up space.
+
+__Pros__
+
+* No http requests
+* Code lives in a single location
+* No redundancy
+
+__Cons__
+
+* Images cannot be cached to speed up load time of additional pages

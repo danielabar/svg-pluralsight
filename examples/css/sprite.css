@@ -1,0 +1,17 @@
+body {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  width: 125px;
+  height: 125px;
+  background: #eee;
+}
