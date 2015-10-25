@@ -18,7 +18,9 @@
     - [Gradient Elements](#gradient-elements)
     - [Styling SVGs with CSS](#styling-svgs-with-css)
   - [SVG Sprites](#svg-sprites)
-    - [Inline SVG Sprites](#inline-svg-sprites)
+    - [Inline Sprites](#inline-sprites)
+  - [Animating SVG](#animating-svg)
+    - [With CSS](#with-css)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -243,7 +245,9 @@ Many SVG prsentation attributes are available to be styled using css.
 
 Technique to maintain DRY principle.
 
-### Inline SVG Sprites
+### Inline Sprites
+
+[Example](examples/inline-sprite.html)
 
 Hidden collection of code snippets for multiple images. Contained within a single SVG tag.
 Code for each individual image within the sprite is wrapped in a `<symbol>` element.
@@ -260,3 +264,14 @@ __Pros__
 __Cons__
 
 * Images cannot be cached to speed up load time of additional pages
+
+## Animating SVG
+
+### With CSS
+
+[Example](examples/animate-with-css.html)
+
+CSS animations and transforms can be used to manipulate SVG elements.
+
+Limited to css animateable properties, some cross browser differences,
+unable to animate points along a path.
