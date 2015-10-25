@@ -275,3 +275,7 @@ CSS animations and transforms can be used to manipulate SVG elements.
 
 Limited to css animateable properties, some cross browser differences,
 unable to animate points along a path.
+
+### With JavaScript
+
+Using a JS library such as Snap.svg and D3 to animate SVG can provide great cross-browser support.
